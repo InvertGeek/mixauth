@@ -23,6 +23,19 @@ export const viewport = {
 };
 
 
+function AppContent({children}) {
+    return (
+        <StyledComponentsRegistry>
+            <ThemeProvider theme={theme}>
+                <GlobalSideEffect/>
+                {children}
+                <DialogContainer/>
+            </ThemeProvider>
+        </StyledComponentsRegistry>
+    )
+}
+
+
 export default function RootLayout({children}) {
     return (
         <html lang="chs">
@@ -40,13 +53,7 @@ export default function RootLayout({children}) {
             gtag('config', 'G-BQJX3Y50XY');
           `}
         </Script>
-        <GlobalSideEffect/>
-        <StyledComponentsRegistry>
-            <ThemeProvider theme={theme}>
-                {children}
-            </ThemeProvider>
-        </StyledComponentsRegistry>
-        <DialogContainer/>
+        <AppContent children={children}/>
         </body>
         </html>
     );
