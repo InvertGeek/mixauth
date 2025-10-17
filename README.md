@@ -1,5 +1,6 @@
 # MixAuth
 无需任何手续，让你的应用快速支持 **QQ / 微信** 登录。 \
+TG交流群: https://t.me/ivgeek \
 基于nextjs开发
 
 ## 在线体验
